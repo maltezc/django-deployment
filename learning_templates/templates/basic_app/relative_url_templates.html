@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    page to link urls to #}
+</head>
+<body>
+    <h1>Welcome to Relative Url Templates</h1>
+{#    <a href="basic_app/other.html">The other page</a>    <--without template tagging #}
+
+
+    {# USE COLONS TO SPECIFY DIRECTORY. make change in django 2.0? #}
+    {# be careful not to have spaces between like ' basic_app:other' #}
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a>
+    <a href="{% url 'basic_app:relative' %}">THE RELATIVE URL TEMPLATES PAGE</a>
+    <a href="{% url 'admin:index' %}">Link to admin</a>  {# is a link to the admin page #}
+    <a href="{% url 'index' %}">link to index page</a>
+
+</body>
+</html>
